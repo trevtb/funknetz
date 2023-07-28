@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+
+
+
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Funknetz Client-/Server-Software</title></head><body>
+<h1><img style="width: 128px; height: 128px;" alt="" src="connect_icon.png"> Funknetz Server-/Client-Software</h1>
+<h2>Features:</h2><h4>Client:</h4>* Steuern der Funksteckdosen mittels grafischer Oberfläche über das Netzwerk.<br>* Vergeben von eigenen Bezeichnungen für die einzelnen Geräte.<br>
+* Zeitsteuerung der einzelnen Geräte mittels selbst erzeugter Zeitereignisse.<br>
+* Störsender, um einen bestimmten Kanal zu stören.<br>* Plattformunabhängig dank Java.<br><br><h4>Server:</h4>* Empfang von Steuerungsbefehlen über das Netzwerk.<br>
+* Autonome Verwaltung von Zeitereignissen und Jammer-Aufträgen, auch bei Beenden des Clients.<br>* Kommunikation mit der Platine von Michael M. (www.marxcomputer.de --&gt; Bastelecke --&gt; Funksteckdosen)<br>* Lauffähig auf Windows, Linux, Sun Solaris 2.8 und MacOSX<br>* Kann sowohl im grafischen (GUI) als auch nicht-grafischen (Konsole) Modus gestartet werden.<br>* Bequeme Auswahl des Serial-Ports über das GUI-Interface.<br><br><a href="http://www.sourceforge.net/projects/funknetz/files/">Quick Download</a><br><a href="http://mitglied.lycos.de/madmax3333">Bauanleitung für die Steuerungsplatine</a><br><a href="https://sourceforge.net/project/screenshots.php?group_id=268512" target="_blank">Screenshots</a><br><a href="http://www.sourceforge.net/projects/funknetz" target="_blank">Sourceforge Projektseite</a><br><br><h3><span style="color: red;">** NEWS **</span></h3>02.
+November 2009: Version 0.3 steht nun zum Download bereit! Es gibt zwar
+nicht, wie versprochen, ein neues Feature, dafür wurde das Client- und
+Server-GUI überarbeitet und sieht nun um einiges besser aus. Ab jetzt
+werde ich mich wieder um neue Features kümmern!<br>
+<br>
+30.
+Oktober 2009: Es existiert jetzt ein SVN-Repository, erreichbar über
+die Sourceforge-Projektseite. Dort findet sich auch ein SVN-Browser,
+mit dem man sich den Sourcecode bequem im Browser anschauen kann. Dies
+funktioniert auch ohne sourceforge.net-Account, also ganz anonym.<br>
+Durch die Einrichtung von SVN erhöht sich die Transparenz des
+Sourcecodes ungemein, da dieser somit viel schneller und einfacher zur
+Verfügung steht. Der Sourcecode steht jedoch auch weiterhin im
+tar.gz-Format in der Download-Sektion bereit.<br>
+<br>
+30. Oktober 2009: Version 0.2.1 wurde released! Dies ist hauptsächlich
+ein Bugfix-Release, liefert aber auch ein neues Feature. Es traten
+Probleme auf, wenn zur selben Zeit mehrere Events ausgeführt werden
+sollten, dies funktioniert nun einwandfrei. Es kann jedoch zu
+Verzögerungen kommen, da die FunknetzBox nur einen Befehl auf einmal
+senden kann, so wie auf der Fernbedienung auch nicht zwei Tasten auf
+einmal gedrückt werden können. Würden also theoretisch mehr als ~60
+Events zur selben Minuten zur Ausführung freigegeben werden, so könnte
+es passieren, dass manche dieser Events erst eine Minute nach dem
+ursprünglich angesetzten Zeitpunkt ausgeführt werden. Da aber nur
+maximal 12 Geräte mit der FunknetzBox angesteuert werden können,
+sollte dies eigentlich keine Rolle spielen, da nie mehr als 12 Events
+pro Minute existieren sollten.<br>
+Das neue Feature ist ein "Jetzt!"-Button im Zeitsteuerungs-GUI, der die
+Werte für ein neues Event auf den jetzigen Zeitpunkt einstellt. Dies
+beschleunigt ungemein die Erstellung neuer Events für den Endnutzer. Es
+war teilweise sehr mühselig den Wecker fuer den nächsten Tag
+einzustellen, wenn man erst 5 Drop-Down-Boxen einstellen musste.<br>
+<br>
+27.
+Oktober 2009: Version 0.2 ist nun fertig. Ich war sehr beschäftigt mit
+meinem Studium und hab lange nicht am Funknetz-Projekt
+weitergearbeitet. Nun habe ich mir ein Herz gefasst und Version 0.2
+vervollständigt. Neben einigen Bugfixes ist die Zeitsteuerung&nbsp; nun
+vollständig integriert und hoffentlich weitgehend bugfrei: per
+GUI-Interface können Zeitereignisse in einer Tabelle angelegt,
+bearbeitet und gelöscht werden. Diese kann an den Server übertragen
+bzw. vom Server empfangen werden. Wird ein Zeitereignis ausgeführt,
+wird es gleichzeitig aus der Liste entfernt. Die Ausführung erfolgt auf
+die Sekunde genau und kommt es zum Serverabsturz, so wird die zuletzt
+aktuell gehaltene Liste wiederhergestellt. Weiterhin wurde die
+Jammer-Steuerung aus dem Server entfernt und in den Client integriert.
+Für die nächste Version
+werde ich das GUI überarbeiten um das Erscheinungsbild und die
+Benutzerfreundlichkeit zu erhöhen.&nbsp; Neue Features sind geplant
+aber ich habe einfach zu viele Ideen um mich jetzt schon festlegen zu
+wollen: mal sehen für was ich mich am meisten begeistern kann.<br>
+<br>
+11.
+Juli 2009: Ich habe der Serversoftware einen Störsender (Jammer)
+hinzugefügt. Dieser ist wieder, wie der Server selbst auch, sowohl
+grafisch als auch über Konsole steuerbar, zudem gab es einige Bugfixes.
+Zudem gibt es den Server jetzt für viele weitere Betriebssysteme. <br><br>11. Juli 2009: Ich habe die Box erfolgreich mit einem Serial-&gt;USB Adapter getestet.&nbsp;<br><span style="font-weight: bold;"></span><span style="color: red;"></span><h2>Über diese Software:</h2>Funknetz
+Server-/Client ist eine Software für die Fernsteuerung von
+Funksteckdosen der&nbsp;Firma REV, welche als Set mit 3 Steckdosen und
+einer Fernbedienung in vielen Baumärkten und im Internet bereits für
+15,00 &#8364; erhältlich ist. Die Fernsteuerung funktioniert mittels einer
+von Michael M. entwickelten Platine, welche mit der
+Fernbedienung von REV verlötet wird. Die Platine wird mittels RS-232
+Schnittstelle mit dem PC verbunden. Eine Konstruktionsanleitung für die
+Platine ist auf <a href="http://www.marxcomputer.de" target="_blank">http://www.marxcomputer.de</a> unter "Bastelecke" --&gt; "Funksteckdosen" zu finden.<br>
+<br>
+<h2>Dokumentation</h2>
+<h3>CLIENT</h3>
+<h4>Der Startbildschirm<br>
+</h4>
+Der Startbildschirm des Client bietet Zugriff auf die Module
+(Fernsteuerung, Jammer und Zeitsteuerung), sowie die Möglichkeit über
+"Einstellungen" die Bezeichner der Geräte und Kanäle zu setzen. Im
+Abschnitt rechts wird die IP-Adresse und der Port des Servers gesetzt.
+Die anderen Module versuchen die Verbindung mit diesen Parametern
+herzustellen.<br>
+
+<h4>Der Fernbedienung<br>
+</h4>Da Fernbedienungs-Modul bietet die Möglichkeit, wie mit der
+normalen Fernbedienung auch, Geräte Ein- und
+Auszuschalten. Die Funknetzbox hängt dabei natürlich am Server. Über
+"Einstellungen" im Haupt-GUI können zusätzlich die Bezeichnungen der
+einzelnen Kanäle und Schalter (Geräte) geändert werden. Bevor die
+Fernbedienung benutzt werden kann, muss zuvor im Haupt-GUI eine
+IP-Adresse und ein Port gesetzt werden.<br>
+<br>
+<h4>Der Jammer</h4>Nach der Wahl
+des Kanal und Schalters (Gerätes), kann er mit einem Klick auf den
+Start-Button gestartet bzw. mit einem Klick auf den Stop-Button wieder
+gestoppt werden. Der Client kann hierbei jederzeit geschlossen werden
+und der Jammer läuft dennoch weiter, da der Server solange mit der
+Störung fortfährt, bis er vom Client wieder ein Stopsignal bekommt.<br>
+Hierbei wird im Abstand von einer Sekunde zuerst ein "ON"- und dann ein
+"OFF"-Befehl gesendet, sodass das betroffene Gerät permanent mit
+Befehlen überflutet wird.<br>
+<br>
+<h4>Die Zeitsteuerung</h4>Zu Beginn oder bei einem Druck auf den
+"Einlesen"-Button, wird die Liste mit Zeitereignissen vom Server
+abgefragt und die Serveruhr synchronisiert. Analog wird bei einem Klick
+auf "Uebernehmen", die aktuell in der Tabelle gehaltene Liste mit
+Zeitereignissen an den Server übertragen. Zeitereignisse können bequem
+per GUI erstellt und optional auch mit einem Intervall "T" (tägliche
+Ausführung) oder "W" (wöchentliche Ausführung) versehen werden. Der
+Client kann jederzeit geschlossen werden und der Server verwaltet die
+Zeitereignisse autonom. Beim Start des Servers wird die zuletzt
+gehaltene Tabelle mit Zeitereignissen von der Festplatte
+wiederhergestellt. Diese schreibt der Server bei jeder noch so kleinen
+Tabellenänderung sofort neu.<br>
+<br>
+<h3>SERVER</h3>
+Der Server kann sowohl grafisch, als auch auf der Konsole gestartet
+werden (siehe FAQ). Er bietet bis auf die Einstellung des Ports und
+Serialports keine weiteren Funktionen, unterrichtet aber in Textform
+über alle Geschehnisse. <br>
+<br>
+<h2>Motivation für diese Software:</h2>Der ursprüngliche Autor des Projekts hat zwar eine Software entwickelt, mit deren Hilfe die Platine
+angesteuert werden kann, diese ist jedoch nur für Windows erhätlich. Da
+ich ausschließlich Linux nutze, begann ich beim Nachbau der Platine
+auch mit der Entwicklung einer eigenen Software in Java, welche auf
+vielen Systemen lauffähig ist. <br><br><h2>Über das Software-Design:</h2>Die
+Software ist, wie bereits erwähnt, vollständig in Java geschrieben. Da
+viele neuere APIs benutzt wurden, wird Java SE 1.5 für den Betrieb
+benötigt. Für die Kommunikation zwischen der Platine und dem PC benutze
+ich die freie API RXTXcomm (<a href="http://www.rxtx.org" target="_blank">www.rxtx.org</a>), mit deren Hilfe die Kommunikation über&nbsp;Serial- oder
+Parallelport auf vielen Systemen möglich ist. Momentan unterstützt
+werden Linux (32- und 64bit), Windows (32bit), MacOSX und Solaris (32-
+und 64bit). <br>
+<br><h2>Download:</h2>Auf <a href="http://www.sourceforge.net/projects/funknetz/files" target="_blank">http://www.sourceforge.net/projects/funknetz/files</a>
+kann sowohl Client als auch Server bezogen werden. Manchmal wird aus
+unbekannten Gründen unter Linux das RXTXcomm Paket benötigt, da die JVM
+dieses nicht findet. Die Ursache hierfür ist noch ungeklärt aber hängt
+vielleicht mit den Class-Path Einstellungen im Betriebssystem zusammen.
+Es sollte sichergestellt werden, dass "." (also der aktuelle Ort) im
+Class-Path enthalten ist. Dieser
+Fehler tritt jedoch nur sporadisch auf. Sollte er auftreten, so kann
+das RXTXcomm Package auf vielen Linuxdistributionen (z.B. Ubuntu)
+direkt über den Paketmanager installiert werden. Sollte dies nicht
+verfügbar sein, so kann man die Binaries oder den Source Code von <a href="http://www.rxtx.org" target="_blank">http://www.rxtx.org</a> herunterladen und gemäß der beiliegenden Installationsanleitung installieren.<br><br><h2>Zukunft:</h2>Für
+Version 0.4 sind neue Module geplant, welche genau steht noch nicht
+fest. Denkbar wäre etwa ein spezielles "Kaffee"-, "Licht"-, oder
+"Wecker"-Modul.<br><br><h2>FAQ:</h2>F: Beim start des Programms über die grafische Oberfläche (z.B. Windows: "doppel-klick") geschieht augenscheinlich nichts.<br>A:
+Dies ist ein sporadisch auftretendes Problem und liegt vermutlich an
+der Art und Weise wie ihr Betriebssystem versucht das .jar zu starten, vorallem mit welchen Classpath-Einstellungen.
+Starten Sie es einfach über die Konsole mit "java -jar
+FunknetzClient.jar" bzw. "java -jar FunknetzServer.jar".<br><br>F: Kann der Server auch auf Betriebssystemen ohne grafische Oberfläche, also ausschließlich auf der Konsole genutzt werden?<br>A:
+Ja. Hierzu muss der Server einfach mit den Argumenten &lt;port&gt; (der
+TCP/IP Port, auf dem der Server laufen soll) und &lt;serial_port&gt;
+(die betriebssystem-spezifische Bezeichnung des Serial-Ports an dem die
+Platine angeschlossen ist) gestartet werden -&nbsp; z.B. "java -jar
+FunknetzServer.jar 5000 /dev/ttyS0" (Linux) oder "java -jar
+FunknetzServer.jar 5000 COM1" (Windows). Der Server startet dann im Konsolenmodus.<br><br>F: Wie kann die Software mit einem Serial-&gt;USB Adapter genutzt werden?<br>A:
+Hierzu muss lediglich die richtige Serialportbezeichnung eingegeben
+werden. Unter Linux z.B. /dev/ttyUSB0 oder unter Windows 2000: COM3.
+</body></html>

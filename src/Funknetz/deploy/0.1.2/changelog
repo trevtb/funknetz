@@ -1,0 +1,7 @@
+* Jammer hinzugefügt. Die Syntax für die Kommandozeile lautet "java -jar FunknetzServer.jar [serialport] jam [kanal] [schalter]". Der Jammer sendet permanent ON/OFF Signale immer abwechselnd im Abstand von einer Sekunde. So kann man eventuell seinen Nachbarn wieder Kanäle "abkämpfen", falls diese begelgt sind. Der Jammer ist auch grafisch im FunknetzServer-GUI integriert. Zu erreichen über Extras->Jammer.
+
+* Die grafische Auswahl des Serialports wurde verändert, da die Anzahl der Namen für Serialports einfach zu groß ist, um sie effizient über das GUI zugänglich zu machen. Stattdessen muss die Bezeichnung nun manuell im GUI über ein Textfeld gesetzt werden. Bei Linux wäre dies z.B. /dev/ttyS0 , /dev/ttyS1 usw. - ein Serial->USB-Adapter wird meist als /dev/ttyUSB0 erkannt. Unter Windows ist es dann z.B. COM1, COM2, usw. - ein Serial->USB Adapter wurde bei mir auf meinem Windows 2000 Test PC als COM3 erkannt.
+
+* Es wurde nun für jede Plattform ein eigenes Paket des Servers erstellt, da er nun auf Windows(32bit), Linux(32bit und 64bit), Sun Solaris 2.8(32bit und 64bit) und MacOSX läuft bzw. laufen sollte. Hierdurch kommt es zu Namenskonflikten bei den benötigten APIs und daher gibt es nun also extra Downloads für jedes Betriebssystem. Ich konnte es bisher nicht auf allen Systemen testen. 
+
+* Verschiedene Bugfixes, welche hauptsächlich die Ausgabe von Fehlermeldungen betreffen.
